@@ -1,0 +1,429 @@
+{% load static %}
+{%include 'header.html' %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management</title>
+</head>
+<body>
+
+  <!--Expriment-->
+
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+    </ul>
+  
+  
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/well.jpg' %}" alt="Los Angeles" width="100%" height="500">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/wall.jpg' %}" alt="Chicago" width="100%" height="500">
+      </div>
+    </div>
+  
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+
+
+<div class="card my-3">
+  <div class="card-header bg-light text-primary text-center">
+    <h1 class="fs-1 text-center ">Tree View</h1>
+  </div>
+  <div class="card-body bg-dark text-center">
+      <div class="tree text-center">
+        
+        <ul>
+            <li>
+
+
+                <a href="#"><img src="static/images/tree.png" alt=""><h5 class="text-light">Managing Director</h2><button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target=".bd-example-modal-sm">Mr. Xyz</button></a>
+
+                  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <!--Start-->
+                        <div class="card" style="width: 20rem;">
+                         <img class="card-img-top" src="static/images/five.png" alt="Card image cap">
+                         <div class="card-body">
+                           <h5 class="card-title">Managing Director</h5>
+                           <h5>Mr. ABC</h5>
+                           <p class="card-text">"Their mind shines like a diamond, constantly illuminating new ideas."<br>
+                            "They possess an extraordinary intellect that dazzles and inspires."
+                            </p>
+                           
+                         </div>
+                       </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                <ul>
+                    <li>
+                        <a href="#"><img src="static/images/five.png" alt=""><h5 class="text-light">Team Manager</h4><button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target=".bd-example-modal-sm">Mr. Xyz</button></a>
+
+                          <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                              <div class="modal-content">
+                                <!--Start-->
+                                <div class="card" style="width: 20rem;">
+                                 <img class="card-img-top" src="static/images/five.png" alt="Card image cap">
+                                 <div class="card-body">
+                                   <h5 class="card-title">Card title</h5>
+                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                   
+                                 </div>
+                               </div>
+                              </div>
+                            </div>
+                          </div>
+                        <ul>
+                            <li>
+                                <a href="#"><img src="static/images/five.png" alt=""> <h5 class="text-light">Assistant Manager</h4><button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target=".bd-example-modal-sm">Mr. Xyz</button></a>
+
+                                  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm">
+                                      <div class="modal-content">
+                                        <!--Start-->
+                                        <div class="card" style="width: 20rem;">
+                                         <img class="card-img-top" src="static/images/five.png" alt="Card image cap">
+                                         <div class="card-body">
+                                           <h5 class="card-title">Card title</h5>
+                                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                           
+                                         </div>
+                                       </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="static/images/five.png" alt=""> <h5 class="text-light">H.R.</h4><button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target=".bd-example-modal-sm">Mr. Xyz</button></a>
+
+                                  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm">
+                                      <div class="modal-content">
+                                        <!--Start-->
+                                        <div class="card" style="width: 20rem;">
+                                         <img class="card-img-top" src="static/images/five.png" alt="Card image cap">
+                                         <div class="card-body">
+                                           <h5 class="card-title">Card title</h5>
+                                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                           
+                                         </div>
+                                       </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#"><img src="static/images/five.png" alt=""><h5 class="text-light">Finance Manager</h4><button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target=".bd-example-modal-sm">Mr. Xyz</button></a>
+
+                          <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                              <div class="modal-content">
+                                <!--Start-->
+                                <div class="card" style="width: 20rem;">
+                                 <img class="card-img-top" src="static/images/five.png" alt="Card image cap">
+                                 <div class="card-body">
+                                   <h5 class="card-title">Card title</h5>
+                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                   
+                                 </div>
+                               </div>
+                              </div>
+                            </div>
+                          </div>
+                        <ul>
+                            <li><a href="#"><img src="static/images/five.png" alt=""><h5 class="text-light">Assistant Finance Manager</h4><button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target=".bd-example-modal-sm">Mr. Xyz</button></a>
+
+                              <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                  <div class="modal-content">
+                                    <!--Start-->
+                                    <div class="card" style="width: 20rem;">
+                                     <img class="card-img-top" src="static/images/five.png" alt="Card image cap">
+                                     <div class="card-body">
+                                       <h5 class="card-title">Card title</h5>
+                                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                       
+                                     </div>
+                                   </div>
+                                  </div>
+                                </div>
+                              </div></li>
+                            <li>
+                                <a href="#"><img src="static/images/five.png" alt=""><h5 class="text-light">H.R.</h4><button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target=".bd-example-modal-sm">Mr. Xyz</button></a>
+
+                                  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm">
+                                      <div class="modal-content">
+                                        <!--Start-->
+                                        <div class="card" style="width: 20rem;">
+                                         <img class="card-img-top" src="static/images/five.png" alt="Card image cap">
+                                         <div class="card-body">
+                                           <h5 class="card-title">Card title</h5>
+                                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                           
+                                         </div>
+                                       </div>
+                                      </div>
+                                    </div>
+                                  </div></a>
+                                <ul>
+                                    <li>
+                                        <a href="#"><img src="static/images/five.png" alt=""><h5 class="text-light">Team</h4><button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target=".bd-example-modal-sm">Mr. Xyz</button></a>
+
+                                          <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-sm">
+                                              <div class="modal-content">
+                                                <!--Start-->
+                                                <div class="card" style="width: 20rem;">
+                                                 <img class="card-img-top" src="static/images/five.png" alt="Card image cap">
+                                                 <div class="card-body">
+                                                   <h5 class="card-title">Card title</h5>
+                                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                   
+                                                 </div>
+                                               </div>
+                                              </div>
+                                            </div>
+                                          </div></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="static/images/five.png" alt=""><h5 class="text-light">Department</h4><button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target=".bd-example-modal-sm">Mr. Xyz</button></a>
+
+                  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <!--Start-->
+                        <div class="card" style="width: 20rem;">
+                         <img class="card-img-top" src="static/images/five.png" alt="Card image cap">
+                         <div class="card-body">
+                           <h5 class="card-title">Card title</h5>
+                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           
+                         </div>
+                       </div>
+                      </div>
+                    </div>
+                  </div></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><img src="static/images/five.png" alt=""><h5 class="text-light">Department</h4><button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target=".bd-example-modal-sm">Mr. Xyz</button></a>
+
+                  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <!--Start-->
+                        <div class="card" style="width: 20rem;">
+                         <img class="card-img-top" src="static/images/five.png" alt="Card image cap">
+                         <div class="card-body">
+                           <h5 class="card-title">Card title</h5>
+                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           
+                         </div>
+                       </div>
+                      </div>
+                    </div>
+                  </div></a></li>
+                        </ul>
+                    </li>
+      
+                    <li>
+                        <a href="#"> <img src="static/images/five.png" alt=""><h5 class="text-light">I.T. Manager</h4><button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target=".bd-example-modal-sm">Mr. Xyz</button></a>
+
+                  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <!--Start-->
+                        <div class="card" style="width: 20rem;">
+                         <img class="card-img-top" src="static/images/five.png" alt="Card image cap">
+                         <div class="card-body">
+                           <h5 class="card-title">Card title</h5>
+                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           
+                         </div>
+                       </div>
+                      </div>
+                    </div>
+                  </div></a>
+                        <ul>
+                            <li>
+                                <a href="#"><img src="static/images/five.png" alt=""><h5 class="text-light">Assistant IT Manager</h4><button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target=".bd-example-modal-sm">Mr. Xyz</button></a>
+
+                  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <!--Start-->
+                        <div class="card" style="width: 20rem;">
+                         <img class="card-img-top" src="static/images/five.png" alt="Card image cap">
+                         <div class="card-body">
+                           <h5 class="card-title">Card title</h5>
+                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           
+                         </div>
+                       </div>
+                      </div>
+                    </div>
+                  </div></a>
+                                <a href="#"><img src="static/images/five.png" alt=""><h5 class="text-light">H.R.</h4><button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target=".bd-example-modal-sm">Mr. Xyz</button></a>
+
+                  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <!--Start-->
+                        <div class="card" style="width: 20rem;">
+                         <img class="card-img-top" src="static/images/five.png" alt="Card image cap">
+                         <div class="card-body">
+                           <h5 class="card-title">Card title</h5>
+                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           
+                         </div>
+                       </div>
+                      </div>
+                    </div>
+                  </div></a>
+                            </li>
+                        </ul>
+                    </li>
+      
+                    <li>
+                      <a href="#"> <img src="static/images/five.png" alt=""><h5 class="text-light">Marketing Manager</h4><button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target=".bd-example-modal-sm">Mr. Xyz</button></a>
+
+                  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <!--Start-->
+                        <div class="card" style="width: 20rem;">
+                         <img class="card-img-top" src="static/images/five.png" alt="Card image cap">
+                         <div class="card-body">
+                           <h5 class="card-title">Card title</h5>
+                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           
+                         </div>
+                       </div>
+                      </div>
+                    </div>
+                  </div></a>
+                      <ul>
+                          <li>
+                              <a href="#"><img src="static/images/five.png" alt=""><h5 class="text-light">Assistant M.M.</h4><button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target=".bd-example-modal-sm">Mr. Xyz</button></a>
+
+                  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <!--Start-->
+                        <div class="card" style="width: 20rem;">
+                         <img class="card-img-top" src="static/images/five.png" alt="Card image cap">
+                         <div class="card-body">
+                           <h5 class="card-title">Card title</h5>
+                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           
+                         </div>
+                       </div>
+                      </div>
+                    </div>
+                  </div></a>
+                              <a href="#"><img src="static/images/five.png" alt=""><h5 class="text-light">H.R.</h4><button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target=".bd-example-modal-sm">Mr. Xyz</button></a>
+
+                  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <!--Start-->
+                        <div class="card" style="width: 20rem;">
+                         <img class="card-img-top" src="static/images/five.png" alt="Card image cap">
+                         <div class="card-body">
+                           <h5 class="card-title">Card title</h5>
+                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           
+                         </div>
+                       </div>
+                      </div>
+                    </div>
+                  </div></a>
+
+                  
+
+                                
+                          </li>
+                      </ul>
+                  </li>
+      
+                </ul>
+                
+            </li>
+        </ul>
+        
+
+        
+
+
+        
+      </div>
+      </div>
+      </div>
+
+
+      <div class="card text-center">
+        <div class="card-header">
+          Hierarchical Tree Structure
+        </div>
+        <div class="card-body">
+          <a class="btn btn-outline-dark mx-5 text-black" href="{% url 'tree' %}" role="button">Goto Hierarchical Tree Structure </a>
+ 
+        </div>
+      </div>
+
+
+
+
+
+      <footer class="text-center bg-light">
+        <h3>OverLays Solutions</h3>
+        <h5>Contact:-7566631633</h5>
+      </footer>
+      
+
+
+
+
+
+
+
+      
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,167 @@
+{% extends 'emp_base.html' %}
+{% block main %}
+
+
+<div class="card shadow m-2">
+    <div class="card-body">
+        <h5 class="p-2 text-black" style="border-bottom : 2px solid blue">Your Profile</h5>
+
+        <div class="container-fluid">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" name="firstname" class="form-control" placeholder="Enter First name" pattern="[A-Za-z]+" value="{{employee.user.first_name}}">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" name="lasttname" class="form-control" placeholder="Enter Last name" pattern="[A-Za-z]+" value="{{employee.user.last_name}}">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Employee Code</label>
+                            <input type="text" name="empcode" class="form-control" placeholder="Enter code" pattern="[0-9]+" value="{{employee.empcode}}">
+                        </div>
+                    </div>
+
+
+                     <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Employee Designation</label>
+                            <input type="text" name="designation" class="form-control" placeholder="Designation" value="{{employee.designation}}">
+                        </div>
+                    </div>
+
+                     <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Employee Department</label>
+                            <input type="text" name="department" class="form-control" placeholder="Department" value="{{employee.empdep}}">
+                        </div>
+                    </div>
+
+                    <!--
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Seniour Reporting</label>
+                            <input type="text" name="sereport" class="form-control" placeholder="Reporting" value="{{employee.sereport}}">
+                        </div>
+                    </div>
+                    -->
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Contact</label>
+                            <input type="text" name="contact" class="form-control" placeholder="Contact Number" value="{{employee.contact}}">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Email ID</label>
+                            <input type="email" name="emailid" class="form-control" placeholder="Email ID" value="{{employee.user.username}}">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Joining Date [{{employee.joiningdate}}]</label>
+                            <input type="date" name="jdate" class="form-control" >
+                        </div>
+                    </div>
+
+
+                     <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Gender [{{employee.gender}}]</label><br>
+                            <select name="gender" class="from-control">
+                                <option value="None">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Seniour Reporting [{{employee.sereport}}]</label><br>
+                            <select name="sereport" class="from-control">
+                                <option value="None">Select Seniour for Reporting </option>
+                               
+                                <optgroup label="Director" class="form-group"></optgroup>
+                                <option value="Managing Director">1. Managing Director <br> (Mr. Abc)</option>
+                                <option value="Additional Director">2. Additional Director (Mr. Abc)</option>
+
+                                <optgroup label="Manager" class="form-group"></optgroup>
+                                <option value="Team Manager">1. Team Manager (Mr. Abc)</option>
+                                <option value="Finance Manager">2. Finance Manager (Mr. Abc)</option>
+                                <option value="I.T. Management">3. I.T. Management (Mr. Abc)</option>
+                                <option value="Marketing manager">4. Marketing manager (Mr. Abc)</option>
+
+                                <optgroup label="Human Resource" class="form-group"></optgroup>
+                                <option value="Team H.R.">1. Team H.R. (Mr. Abc)</option>
+                                <option value="Finance H.R.">2. Finance H.R. (Mr. Abc)</option>
+                                <option value="I.T. H.R.">3. I.T. H.R. (Mr. Abc)</option>
+                                <option value="Marketing H.R.">4. Marketing H.R. (Mr. Abc)</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                    <!--<label>Seniour Reporting</label>
+                        <input type="text" name="sereport" class="form-control" placeholder="Reporting" value="{{employee.sereport}}">-->
+
+
+                    <!--    
+                    <div class="col-sm-6"> 
+                    <div class="form-group">
+                        <label>Seniour Reporuing [{{employee.sereport}}] </label>
+                        <button name="sereport" class="form-control" placeholder="Reporting" value="{{employee.sereport}}" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Select button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <label for="">Director</label>
+                          <ul>
+                           <li><a class="dropdown-item" href="#">Another action</a></li>
+                           <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      -->
+
+                    
+                   
+
+
+                </div>
+                <br>
+                <input type="submit" value="submit" class="m-2 px=4 btn btn-primary">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% if error == "no" %}
+<script>
+    alert('Profile updated Successfull');
+    window.location = ('{% url 'profile' %}');
+</script>
+{% endif %}
+{% if error == "yes" %}
+<script>
+    alert('Somthing Went Wrong, Pleas Try Again.........!!!!!!!!!!!');
+</script>
+{% endif %}
+{% endblock %}
